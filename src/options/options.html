@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expertspam preferences</title>
+    <link href="tailwind.css" rel="stylesheet">
+    <script src="options.js" defer></script>
+</head>
+<body>
+<div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:col-span-1">
+            <div class="px-4 sm:px-0">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">Preferences</h3>
+                <p class="mt-1 text-sm text-gray-600">Decide how you want to configure the add-on to appear and behave.</p>
+            </div>
+        </div>
+        <div class="mt-5 md:col-span-2 md:mt-0">
+            <form>
+                <div class="overflow-hidden shadow sm:rounded-md">
+                    <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
+                        <fieldset>
+                            <legend class="sr-only">Appearance</legend>
+                            <div class="text-sm font-semibold leading-6 text-gray-900" aria-hidden="true">Appearance</div>
+                            <p class="text-sm text-gray-500">Choose where you want the Report spam action to be available.</p>
+                            <div class="mt-4 space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex h-6 items-center">
+                                        <input id="menu" name="menu" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                    </div>
+                                    <div class="ml-3">
+                                        <label for="menu" class="text-sm font-medium leading-6 text-gray-900">Enable in menu</label>
+                                        <p class="text-sm text-gray-500">Enable the Report spam action in the context menu.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex h-6 items-center">
+                                        <input id="toolbar" name="toolbar" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                    </div>
+                                    <div class="ml-3">
+                                        <label for="toolbar" class="text-sm font-medium leading-6 text-gray-900">Enable in toolbar</label>
+                                        <p class="text-sm text-gray-500">Enable the Report spam action in the toolbar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="contents text-sm font-semibold leading-6 text-gray-900">Behavior</legend>
+                            <p class="text-sm text-gray-500">Choose an additional action that the add-on will take after marking the message as junk and reporting it.</p>
+                            <div class="mt-4 space-y-4">
+                                <div class="flex items-center">
+                                    <input id="action-nothing" name="action" value="nothing" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                    <label for="action-nothing" class="ml-3 block text-sm font-medium leading-6 text-gray-900">Nothing</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="action-junk" name="action" value="junk" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                    <label for="action-junk" class="ml-3 block text-sm font-medium leading-6 text-gray-900">Move to junk</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="action-trash" name="action" value="trash" type="radio" checked class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                    <label for="action-trash" class="ml-3 block text-sm font-medium leading-6 text-gray-900">Move to trash</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="action-delete" name="action" value="delete" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                    <label for="action-delete" class="ml-3 block text-sm font-medium leading-6 text-gray-900">Delete</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
