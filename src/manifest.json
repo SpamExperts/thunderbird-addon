@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Expertspam",
+  "description": "Report spam, false-positives or phishing back to your antispam provider.",
+  "version": "2.0.0",
+  "author": "Your Antispam Company",
+  "applications": {
+    "gecko": {
+      "id": "spamreport@expertspam.com",
+      "strict_min_version": "78.6.1"
+    }
+  },
+  "icons": {
+    "32": "images/icon.png"
+  },
+  "permissions": [
+    "accountsRead",
+    "menus",
+    "messagesDelete",
+    "messagesMove",
+    "messagesRead",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "message_display_action": {
+    "default_icon": "images/icon.png",
+    "default_label": "Report spam",
+    "default_title": "Click here to report selected messages as spam"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false,
+    "browser_style": true
+  }
+}
